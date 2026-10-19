@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terrenos RUDDY</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f1;color:#20352b}
+header{background:#123b2b;color:white;padding:22px 16px;text-align:center}
+header h1{margin:0;font-size:30px}
+header span{color:#c8f169}
+header p{margin-bottom:0}
+.hero{padding:45px 20px;text-align:center;background:#dfead9}
+.hero h2{font-size:34px;margin:0 0 15px}
+.hero p{line-height:1.6}
+button,.btn{display:inline-block;border:0;border-radius:9px;padding:14px 18px;background:#bce967;color:#173323;font-weight:bold;text-decoration:none;font-size:15px}
+main{padding:25px 15px;max-width:1000px;margin:auto}
+h2{text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 3px 12px #0001;padding-bottom:20px}
+.card img{width:100%;height:170px;object-fit:cover}
+.card h3,.card p,.card .btn{margin-left:16px;margin-right:16px}
+.card p{line-height:1.5}
+.price{font-size:23px;font-weight:bold;color:#1a593b}
+.contact{text-align:center;background:#e1eadc;padding:25px 15px;border-radius:15px;margin:30px 0}
+footer{background:#123b2b;color:white;text-align:center;padding:22px}
+</style>
+</head>
+<body>
+<header>
+<h1>TERRENOS <span>RUDDY</span></h1>
+<p>Tu terreno, tu futuro</p>
+</header>
+
+<section class="hero">
+<h2>Encuentra tu próximo terreno</h2>
+<p>Descubre lotes y terrenos disponibles.<br>Consulta precios y ubicaciones directamente.</p>
+<a class="btn" href="#terrenos">Ver terrenos</a>
+</section>
+
+<main>
+<h2 id="terrenos">Terrenos disponibles</h2>
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Paisaje de terreno">
+<h3>Terreno 1</h3>
+<p>📍 Ubicación: por confirmar</p>
+<p>📐 Superficie: por confirmar</p>
+<p class="price">Precio: consultar</p>
+<a class="btn consulta" href="#">Consultar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Paisaje natural">
+<h3>Terreno 2</h3>
+<p>📍 Ubicación: por confirmar</p>
+<p>📐 Superficie: por confirmar</p>
+<p class="price">Precio: consultar</p>
+<a class="btn consulta" href="#">Consultar</a>
+</div>
+
+</div>
+
+<section class="contact">
+<h2>¿Buscas un terreno?</h2>
+<p>Contáctanos para recibir más información.</p>
+<a class="btn" id="contacto" href="#">Hablar por WhatsApp</a>
+</section>
+</main>
+
+<footer>
+<strong>TERRENOS RUDDY</strong>
+<p>Tu próximo terreno comienza aquí.</p>
+</footer>
+
+<script>
+const numero = "591XXXXXXXXX";
+const mensaje = encodeURIComponent("Hola, quiero información sobre los terrenos de RUDDY.");
+document.querySelectorAll(".consulta,#contacto").forEach(function(enlace){
+enlace.href = "https://wa.me/" + numero + "?text=" + mensaje;
+});
+</script>
+</body>
+</html>
